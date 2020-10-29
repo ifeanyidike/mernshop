@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import { PayPalButton } from "react-paypal-button-v2"
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements, useElements } from "@stripe/react-stripe-js"
+import { Elements } from "@stripe/react-stripe-js"
 import StripePayment from "../components/StripePayment"
 import PayStackPayment from "../components/PayStackPayment"
 
@@ -88,7 +88,7 @@ const OrderScreen = ({ match, history }) => {
 
         }
 
-    }, [dispatch, order, orderId, successPay, successDeliver])
+    }, [dispatch, order, orderId, successPay, successDeliver, history, stripePromise, userInfo])
 
     const successPaymentHandler = (paymentResult) => {
         console.log(paymentResult)

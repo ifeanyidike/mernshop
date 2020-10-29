@@ -1,10 +1,10 @@
-import React, { useMemo, useState, useEffect } from "react"
+import React, { useMemo, useState } from "react"
 import axios from "axios"
 import { Button } from "react-bootstrap"
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import useResponsiveFontSize from "./useResponsiveFontSize"
-import { useDispatch, useSelector } from "react-redux"
-import { getOrderDetails, payOrder, deliverOrder } from "../actions/orderActions"
+import { useDispatch } from "react-redux"
+import { payOrder } from "../actions/orderActions"
 import Loader from "./Loader"
 
 const useOptions = () => {
@@ -65,7 +65,7 @@ const StripePayment = ({ email_address, orderId, amount }) => {
 
         const cardElement = elements.getElement(CardElement);
 
-        const payload = await stripe.confirmCardPayment(clientSecret, {
+        await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: cardElement,
             }
