@@ -1,9 +1,8 @@
-# mernshop
-This app is hosted at [spicymernshopapp.herokuapp.com](https://spicymernshopapp.herokuapp.com).
+# [mernshop](https://bit.ly/mernshop)
 
-# MERNSHOP
+This app is hosted at [bit.ly/mernshop](https://bit.ly/mernshop).
 
-This is a full MERN stack build with **React**, **Redux**, **Redux Thunk**, **Bootstrap**, **React Bootstrap**, **routing with React Router DOM**, in the frontend 
+It is full MERN stack build with **React**, **Redux**, **Redux Thunk**, **Bootstrap**, **React Bootstrap**, **routing with React Router DOM**, in the frontend 
 and **Node.js**, **Express**, **JSON web token**, **REST API**, **MongoDB**, **Mongoose** in the backend.
 
 The app makes use of `full local authentication`, thanks to JSON web token. This includes both users registration and login.
