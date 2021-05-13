@@ -16,10 +16,7 @@ const makeStripePayment = async (req, res) => {
     } catch (error) {
         res.status(402)
         throw new Error(error)
-
     }
-
-
 
 }
 
